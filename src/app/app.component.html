@@ -6,21 +6,38 @@
   >
     <mat-icon>menu</mat-icon>
   </button>
+
   <span>SisCad</span>
   <span class="example-spacer"></span>
+
   <button
     mat-icon-button
-    class="example-icon favorite-icon"
+    class="example-icon"
     aria-label="Example icon-button with heart icon"
+    [routerLink]="['']"
+    routerLinkActive="router-link-active"
   >
     <mat-icon>home</mat-icon>
   </button>
+
   <button
     mat-icon-button
     class="example-icon"
     aria-label="Example icon-button with share icon"
+    [routerLink]="['cadastro']"
+    routerLinkActive="router-link-active"
   >
-    <mat-icon>share</mat-icon>
+    <mat-icon>library_add</mat-icon>
+  </button>
+
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+    [routerLink]="['login']"
+    routerLinkActive="router-link-active"
+  >
+    <mat-icon>how_to_reg</mat-icon>
   </button>
 </mat-toolbar>
 <router-outlet> </router-outlet>
