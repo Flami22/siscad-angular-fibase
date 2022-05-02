@@ -13,6 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { LoginComponent } from './components/login/login.component';
 import { environment } from 'src/environments/environment';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,13 +24,15 @@ import { environment } from 'src/environments/environment';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatSliderModule,
     MatToolbarModule,
     MatIconModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
     MatInputModule,
-    AngularFireModule.initializeApp(environment.firebase) ,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [],
   bootstrap: [AppComponent]

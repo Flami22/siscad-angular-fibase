@@ -1,20 +1,27 @@
 <h3>Cadastro</h3>
+<div class="form-cadastro">
+  <form [formGroup]="formProduct" (ngSubmit)="saveProduct()">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nome do produto</mat-label>
+      <input
+        formControlName="nome"
+        matInput
+        placeholder="Digite o nome do produto"
+        value=""
+      />
+    </mat-form-field>
 
-<form class="form-cadastro">
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Nome do produto</mat-label>
-    <input matInput placeholder="Digite o nome do produto" value="" />
-  </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Preço</mat-label>
+      <textarea matInput placeholder="Digite o valor..."></textarea>
+      <input formControlName="preco" matInput type="text" value="" />
+    </mat-form-field>
 
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Valor</mat-label>
-    <textarea matInput placeholder="Digite o valor..."></textarea>
-  </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Quantidade</mat-label>
+      <input formControlName="qtde" matInput type="number" value="" />
+    </mat-form-field>
 
-  <mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Quantidade</mat-label>
-    <input matInput type="number" value="" />
-  </mat-form-field>
-
-  <button mat-flat-button color="primary">Cadastrar</button>
-</form>
+    <button mat-flat-button type="submit" color="primary">Cadastrar</button>
+  </form>
+</div>
