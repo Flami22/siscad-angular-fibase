@@ -1,6 +1,10 @@
 <h3>Cadastro</h3>
 <div class="form-cadastro">
-  <form [formGroup]="formProduct" (ngSubmit)="saveProduct()">
+  <form
+    class="form-cadastro"
+    [formGroup]="formProduct"
+    (ngSubmit)="saveProduct()"
+  >
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>Nome do produto</mat-label>
       <input

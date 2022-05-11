@@ -5,7 +5,7 @@ import { CrudService } from 'src/app/services/crud.service';
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.sass'],
+  styleUrls: ['./cadastro.component.scss'],
 })
 export class CadastroComponent implements OnInit {
   formProduct: FormGroup;
@@ -14,16 +14,17 @@ export class CadastroComponent implements OnInit {
     this.formProduct = formBuilder.group({
       nome: [''],
       preco: [''],
-      qtde: [1],
+      qtde: [''],
     });
-    console.log('deu ruim');
   }
 
   ngOnInit(): void {}
 
   saveProduct() {
-    if (this.formProduct.valid) {
+    if (this.formProduct) {
       this.crud.create(this.formProduct.value);
+    } else {
+      alert('Todos os campos obrigatorios');
     }
   }
 }
